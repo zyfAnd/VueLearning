@@ -24,7 +24,15 @@
       <span class="demonstration">默认不区分颜色</span>
       <el-rate v-model="value1"></el-rate>
     </div>
+
+    <hr>
+    <i class="el-icon-edit"></i>
+    <i class="el-icon-share"></i>
+    <i class="el-icon-delete"></i>
+    <el-button type="primary" icon="el-icon-search">搜索</el-button>
   </div>
+
+
 
 </template>
 
