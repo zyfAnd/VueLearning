@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(VueAxios, axios)
-Vue.use(ElementUI);
-Vue.config.productionTip = false
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
+Vue.config.productionTip = false
+Vue.use(ElementUI);
+Vue.use(VueAxios, axios)
 new Vue({
   render: h => h(App),
 }).$mount('#app')
