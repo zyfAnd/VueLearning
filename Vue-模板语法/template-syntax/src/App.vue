@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-
+    <Stars></Stars>
   </div>
 </template>
 
 <script>
 
+
+import Stars from "@/components/Stars";
 export default {
   name: 'App',
   components: {
+    Stars
 
   }
 }
