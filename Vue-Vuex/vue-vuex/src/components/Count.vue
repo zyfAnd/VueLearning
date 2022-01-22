@@ -2,15 +2,19 @@
 
   <div>
 <!--    element selection 选择器-->
-    <el-select v-model="value" placeholder="请选择">
+    <h1> 当前求和为 ： {{sum}}</h1>
+    <el-select v-model="n" placeholder="请选择">
       <el-option
           v-for="item in options"
-          :key="item.value"
+          :key="item.n"
           :label="item.label"
-          :value="item.value">
+          :value="item.n">
       </el-option>
     </el-select>
-    <el-button @click="add" type="primary"> add </el-button>
+    <el-button @click="increment" type="primary"> + </el-button>
+    <el-button @click="decrement" type="primary"> - </el-button>
+    <el-button @click="incrementOdd" type="primary"> 当前求和为奇数再加 </el-button>
+    <el-button @click="incrementWait" type="primary"> 等一等再加 </el-button>
 
   </div>
 
@@ -22,29 +26,47 @@ export default {
   data() {
     return {
       options: [{
-        value: '1',
+        n: 1,
         label: '1'
       }, {
-        value: '2',
+        n: 2,
         label: '2'
       }, {
-        value: '3',
+        n: 3,
         label: '3'
       }, {
-        value: '4',
+        n: 4,
         label: '4'
       }, {
-        value: '5',
+        n: 5,
         label: '5'
       }],
-      value: ''
+      // value: 1,
+      sum:0,
+      n:1
     }
+
   },
   methods:{
-    add() {
+    increment() {
+      this.sum += this.n
+    },
+    decrement () {
+      this.sum -= this.n
+    },
+    incrementOdd() {
+      if (this.sum % 2) {
+        this.sum += this.n
+      }
+    },
+    incrementWait() {
+      setTimeout(()=>{
+        //函数
+        this.sum += this.n
+      }, 500)
+    }
 
     }
-  }
 }
 </script>
 
