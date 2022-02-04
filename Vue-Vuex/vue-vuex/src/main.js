@@ -5,7 +5,10 @@ import App from './App.vue'
 import ElementUI from 'element-ui'
 //引入 element ui 全部组件
 import 'element-ui/lib/theme-chalk/index.css';
+//引入vuex
+import Vuex from 'vuex'
 Vue.use(ElementUI)
+Vue.use(Vuex)
 Vue.config.productionTip = false
 
 new Vue({
